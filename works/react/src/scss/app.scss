@@ -1,0 +1,41 @@
+.todo {
+	&__text {
+		font-size: 20px;
+	}
+	&__date {
+		font-size: 10px;
+	}
+	&__textArea {
+		resize: none;
+	}
+}
+
+.displayFlex {
+    display: flex;
+}
+
+.ml5 {
+    margin-left: 5px;
+}
+
+
+.news{
+	background-color:#eee;
+	border:1px solid #aaa;
+	padding:10px;
+  
+	li{
+	  font-size:3.0rem;
+	  border-bottom:1px solid #aaa;
+  
+	  &.new{
+		&:before{
+		  content:'new!';
+		  display:inline-block;
+		  background-color:#3333aa;
+		  border-radius:5px;
+		  padding:3px;
+		}
+	  }
+	}
+  }

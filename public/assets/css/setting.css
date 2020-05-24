@@ -1,0 +1,323 @@
+@charset "UTF-8";
+/* ===============================================
+
+  ■ Setting  (MCSS:Foundation)
+    ※Base → Base    上書き○
+    ※Base → Project 上書き×
+  
+  --------------------------------------------
+
+  ■ 命名規則 BEM + MCSS
+  
+    block     block
+    element   block_element
+    modifier  block_element.__modifier
+    
+    ※状態を表すものはprefixをつける is-, has-, not-...
+
+  --------------------------------------------
+  
+  ■ Index
+  
+    1.Reset
+    2.Setting
+
+=============================================== */
+
+
+/* reset
+=============================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button, select, input { margin: 0; padding: 0; border: 0; font-size: 100%; font-weight: 200; vertical-align: baseline; background: none; font-weight: normal; box-sizing: border-box;}
+input[type="text"], input[type="password"], input[type="url"], input[type="tel"], input[type="search"], input[type="number"], input[type="datetime"], input[type="email"] { height: 100%;}
+select { border-radius: 0; background: none transparent; vertical-align: middle; color: inherit; box-sizing: content-box; -moz-appearance: none; -webkit-appearance: none; appearance: none; text-indent: 0.01px; text-overflow: '';}
+select::-ms-expand { display: none;}
+table > caption { width: inherit; height: inherit; marker-offset: inherit; position: inherit;}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block;}
+body { line-height: 1;}
+ol, ul { list-style: none;}
+blockquote, q { quotes: none;}
+blockquote:before, blockquote:after { content: ''; content: none;}
+q:before, q:after { content: ''; content: none;}
+table { border-collapse: collapse; border-spacing: 0;}
+button { border-radius: 0;}
+button:focus, button:active { background: inherit; border: none;}
+a { text-decoration: none;}
+a:focus, a:activ { background: inherit; border: none;}
+
+/* setting
+=============================================== */
+html,
+body { width: 100%; overflow-x: hidden;}
+
+/* Font
+---------------------------*/
+/* Size
+   1.0rem = PC:20px SP:10px
+   1.2rem = PC:24px SP:12px
+*/
+html {
+  font-size: 62.5%;
+  font-size: 125% \9  !important;}
+
+@media screen and (min-width: 769px) {
+  html {
+    font-size: 125%;}
+  body {
+    width: 100%;
+    overflow-x: hidden;}
+}
+body {
+  font-size: 1.0em;}
+
+
+@media screen and (max-width: 768px) {
+
+  input[type="text"], input[type="password"], input[type="url"], input[type="tel"], input[type="search"], input[type="number"], input[type="datetime"], input[type="email"] {
+    font-size: 1.8rem;
+    line-height: 2.6rem;} }
+img { width: 100%; vertical-align: bottom;}
+
+a { color: #333; opacity: 1;}
+  a:visited {
+    color: #333;
+    opacity: 1;}
+  a:hover {
+    text-decoration: inherit;}
+
+a:hover, button:hover {
+  color: #333;
+  opacity: 0.7;
+  transition: all 0.4s;}
+
+.alink:visited {
+  color: #333;
+  opacity: 1;}
+
+button:hover, .btn_item:hover {
+  text-decoration: none;}
+
+th, td {
+  word-vreak: break-all;}
+
+button {
+  width: 100%;
+  line-height: 1.2rem;}
+  button:hover {
+    border: none;}
+
+@media screen and (max-width: 768px) {
+  button {
+    line-height: 2.3rem;} }
+/* Family
+   数字は Arial or Helvetica
+*/
+/* 'Noto Sans Japanese' licensed under the SIL Open Font License
+ * by https://www.google.com/get/noto/#sans-jpan*/
+label, input[type='checkbox'] {
+  cursor: pointer;}
+
+.taC { text-align: center !important; }
+.taL { text-align: left !important; }
+.taR { text-align: right !important; }
+
+
+
+
+
+/* font
+----------------------------------------*/
+html {
+    /*font-family: BlinkMacSystemFont, "Helvetica Neue", CezannePro-M, sans-serif;*/
+    font-family: 'Open Sans', sans-serif;
+}
+h2 { font-weight: bold;}
+h3 { font-weight: bold;}
+.txt_main { text-align: center;}
+.txt_sub { text-align: center;}
+
+
+@media screen and (min-width: 769px){
+    p, div, ul > li, ol > li, dl > dt, dl > dd, textarea { font-size: 16px; line-height: 24px;}
+    h2 { font-size: 60px;}
+    h3 { font-size: 40px; line-height: 64px;}
+    h4 { }
+    .txt_sub { font-size: 14px; line-height: 22px;}
+    #contact .formList_item dt { font-weight: bold; vertical-align: middle;}
+}
+@media screen and (max-width: 768px) {
+    p, div, ul > li, ol > li, dl > dt, dl > dd, textarea { font-size: 2.2rem; line-height: 3.0rem;}
+    h2 { font-size: 4rem; line-height: 4rem; font-weight: bold;}
+    h3 { font-size: 3rem; line-height: 3rem; font-weight: bold;}
+    h4 { font-size: 2rem; line-height: 2rem;}
+    #gNavi ul li a { font-size: 3.2rem;}
+    #skill h3 { font-size: 2.6rem; line-height: 3.0rem;}
+    #skill h3 span { font-size: 20px; line-height: 20px;}
+    #experience .txtArea dt { font-size: 20px; font-weight: bold;}
+    #experience .txtArea dt span { font-size: 14px; font-weight: bold;}
+    #experience .txtArea dd ul li { font-size: 16px; line-height: 22px;}
+    #corporation dl dt { font-size: 2.6rem;}
+    #corporation dl dd { font-size: 2.2rem;}
+    #corporation dl dd ul li { font-size: 2.0rem;}
+}
+
+
+
+
+
+/* ステータス分岐
+----------------------------------------------*/
+/* PC・SP */
+@media screen and (min-width: 769px) {
+  [data-device="sp"] { display: none !important;}
+}
+@media screen and (max-width: 768px) {
+  [data-device="pc"] { display: none !important;}
+}
+
+
+body .frame1280 {
+    *zoom: 1;
+}    
+body .frame1280:after { content: ''; display: table; clear: both;}
+
+@media screen and (min-width: 1280px){
+    body .frame1280 {
+        width: 1280px;
+        margin: 0 auto;
+    }
+    body .frame1280:after { content: ''; display: table; clear: both;}
+}
+@media screen and (min-width: 1024px){
+    
+}
+@media screen and (min-width: 769px){
+    body { font-size: 18px;}
+    .inner { width: 96%; margin: 0 auto}
+    .frame1280 { width: 100%; margin: 0 auto;}
+    .frame768 { width: 768px; margin: 0 auto;}
+}
+@media screen and (max-width: 768px){
+    .frame1280 { width: 100%;}
+    .frame768 { width: 100%;}
+}
+
+/* grid */
+.grid {
+    display: grid;
+}
+    .grid.__column2 { grid-template-columns: 1fr 1fr;}
+    .grid.__column3 { grid-template-columns: 1fr 1fr 1fr;}
+    .grid.__column4 { grid-template-columns: 1fr 1fr 1fr 1fr;}
+    .grid.__column5 { grid-template-columns: 1fr 1fr 1fr 1fr 1fr;}
+    .grid.__column6 { grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;}
+    .grid.__gap1 { gap: 1%;}
+    .grid.__gap2 { gap: 2%;}
+    .grid.__gap3 { gap: 3%;}
+    .grid.__gap4 { gap: 4%;}
+    .grid.__gap5 { gap: 5%;}
+    .grid.__gap6 { gap: 6%;}
+    .grid.__gap7 { gap: 7%;}
+    .grid.__gap8 { gap: 8%;}
+    .grid.__gap9 { gap: 9%;}
+    .grid.__gap10 { gap: 10%;}
+
+@media screen and (min-width: 769px){
+    .grid-pc {
+        display: grid;
+    }
+        .grid.__column2-pc,
+        .grid-pc.__column2-pc { grid-template-columns: 1fr 1fr;}
+        .grid.__column3-pc,
+        .grid-pc.__column3-pc { grid-template-columns: 1fr 1fr 1fr;}
+        .grid.__column4-pc,
+        .grid-pc.__column4-pc { grid-template-columns: 1fr 1fr 1fr 1fr;}
+        .grid.__column5-pc,
+        .grid-pc.__column5-pc { grid-template-columns: 1fr 1fr 1fr 1fr 1fr;}
+        .grid.__column6-pc,
+        .grid-pc.__column6-pc { grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;}
+        .grid.__gap1-pc,
+        .grid-pc.__gap1-pc { gap: 1%;}
+        .grid.__gap2-pc,
+        .grid-pc.__gap2-pc { gap: 2%;}
+        .grid.__gap3-pc,
+        .grid-pc.__gap3-pc { gap: 3%;}
+        .grid.__gap4-pc,
+        .grid-pc.__gap4-pc { gap: 4%;}
+        .grid.__gap5-pc,
+        .grid-pc.__gap5-pc { gap: 5%;}
+        .grid.__gap6-pc,
+        .grid-pc.__gap6-pc { gap: 6%;}
+        .grid.__gap7-pc,
+        .grid-pc.__gap7-pc { gap: 7%;}
+        .grid.__gap8-pc,
+        .grid-pc.__gap8-pc { gap: 8%;}
+        .grid.__gap9-pc,
+        .grid-pc.__gap9-pc { gap: 9%;}
+        .grid.__gap10-pc,
+        .grid-pc.__gap10-pc { gap: 10%;}
+}
+@media screen and (max-width: 768px){
+    .grid-sp {
+        display: grid;
+    }
+        .grid.__column2-sp,
+        .grid-sp.__column2-sp { grid-template-columns: 1fr 1fr;}
+        .grid.__column3-sp,
+        .grid-sp.__column3-sp { grid-template-columns: 1fr 1fr 1fr;}
+        .grid.__column4-sp,
+        .grid-sp.__column4-sp { grid-template-columns: 1fr 1fr 1fr 1fr;}
+        .grid.__column5-sp,
+        .grid-sp.__column5-sp { grid-template-columns: 1fr 1fr 1fr 1fr 1fr;}
+        .grid.__column6-sp,
+        .grid-pc.__column6-sp { grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;}
+        .grid.__gap1-sp,
+        .grid-sp.__gap1-sp { gap: 1%;}
+        .grid.__gap2-sp,
+        .grid-sp.__gap2-sp { gap: 2%;}
+        .grid.__gap3-sp,
+        .grid-sp.__gap3-sp { gap: 3%;}
+        .grid.__gap4-sp,
+        .grid-sp.__gap4-sp { gap: 4%;}
+        .grid.__gap5-sp,
+        .grid-sp.__gap5-sp { gap: 5%;}
+        .grid.__gap6-sp,
+        .grid-sp.__gap6-sp { gap: 6%;}
+        .grid.__gap7-sp,
+        .grid-sp.__gap7-sp { gap: 7%;}
+        .grid.__gap8-sp,
+        .grid-sp.__gap8-sp { gap: 8%;}
+        .grid.__gap9-sp,
+        .grid-sp.__gap9-sp { gap: 9%;}
+        .grid.__gap10-sp,
+        .grid-sp.__gap10-sp { gap: 10%;}
+}
+
+
+/* flexbox */
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+    .flexbox:after {
+        content:"";
+        display: block;
+    }
+    .flexbox.__column2:after { width: 50%;}
+    .flexbox.__column3:after { width: 33.3%;}
+    .flexbox.__column4:after { width: 25%;}
+    .flexbox.__column5:after { width: 20%;}
+.flexbox.__column2 > div, .flexbox.__column2 > p, .flexbox.__column2 > a, .flexbox.__column2 > span, .flexbox.__column2 > li, .flexbox.__column2 > dl { flex-basis: 50%;}
+.flexbox.__column3 > div, .flexbox.__column3 > p, .flexbox.__column3 > a, .flexbox.__column3 > span, .flexbox.__column3 > li, .flexbox.__column3 > dl { flex-basis: 33.3%;}
+.flexbox.__column4 > div, .flexbox.__column4 > p, .flexbox.__column4 > a, .flexbox.__column4 > span, .flexbox.__column4 > li, .flexbox.__column4 > dl  { flex-basis: 25%;}
+.flexbox.__column5 > div, .flexbox.__column5 > p, .flexbox.__column5 > a, .flexbox.__column5 > span, .flexbox.__column5 > li, .flexbox.__column5 > dl  { flex-basis: 20%;}
+
+
+@media screen and (max-width: 768px) {
+    .flexbox.__flex-pc {
+        display: block;
+    }
+}
