@@ -13,7 +13,10 @@ $(function(){
         var target = $(href == "#" || href == "" ? 'html' : href);
         var position = target.offset().top;
         $("html, body").animate({scrollTop:position}, speed, "swing");
-        $('#menu-cb').click(); // 遷移後にハンバーガーメニューを閉じる
+        console.log(href);
+        if(!(href == '#top')){
+            $('#menu-cb').click(); // 遷移後にハンバーガーメニューを閉じる
+        }
         return false;
       });
     }
@@ -58,14 +61,20 @@ $(window).scroll(function(){
     Parallax();
 });
     /* ページトップ */
-    let srlTop, winH, elemPos, scroll;
+    let srlTop, winH, elemPos, scroll, footerTop, footerH;
     function toTop(){
         srlTop = $(this).scrollTop();
-        if (srlTop > 300) {
+        winH = $(window).height();
+        footerTop = $('.footer').offset().top;
+        footerH = $('.footer').height();
+        if(srlTop + winH > footerTop){
+            $('.pageTop')
+                .css('bottom', footerH);
+        } else if (srlTop > 300) {
             $('.pageTop')
                 .addClass('is-fadeIn')
-                .removeClass('is-fadeOut');
-
+                .removeClass('is-fadeOut')
+                .removeAttr('style');
         } else {
             $('.pageTop')
                 .removeClass('is-fadeIn')
@@ -91,7 +100,7 @@ $(window).scroll(function(){
     }
 
 /* Instagram Feed */
-const accessToken = '6107959417.c9c8445.38437ce644c14bb5bc81c33559410abc',    // アクセストークン
+/*const accessToken = '6107959417.c9c8445.38437ce644c14bb5bc81c33559410abc',    // アクセストークン
       userid = 6107959417,  // ユーザーID
       count = 9;            // 取得件数
 function instaFeed(){
@@ -110,5 +119,5 @@ function instaFeed(){
             $('#instaFeed').append(insert);
         }
     });
-}
+}*/
 

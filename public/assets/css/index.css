@@ -108,7 +108,7 @@ header .frame1280 {
     }
     #ham-menu {
         width: 30rem;
-        height: 100%;
+        min-height: 100rem;
         background-color: #fff;
         padding: 4rem 0;
         position: fixed;
@@ -202,7 +202,7 @@ header .frame1280 {
 .inner { padding: 80px 0;}
 h2, h3 { text-align: center;}
 h2 { margin-bottom: 60px;}
-h3 { margin-bottom: 40px;}
+h3 { margin-bottom: 30px;}
 .section h2 img { margin: 0 auto}
 
 @media screen and (max-width: 768px) {
@@ -215,11 +215,9 @@ h3 { margin-bottom: 40px;}
 /* mv
 ----------------------------------------*/
 #mv {
-    margin-bottom: 150px;
     position: relative;
-    clear: both;
-    height: 500px;
     overflow: hidden;
+    z-index: -1;
 }
 #video {
     position: relative;
@@ -247,10 +245,20 @@ h3 { margin-bottom: 40px;}
 
 
 @media screen and (min-width: 769px){
-
+    #mv {
+        margin-bottom: 150px;
+        height: 500px;
+    }
 }
 @media screen and (max-width: 768px){
-
+    #mv .logo {
+        width: 30%;
+        height: inherit;
+        top: 15rem;
+    }
+    #video {
+        padding-top: 80%;
+    }
 }
 
 /* about */
@@ -306,9 +314,6 @@ h3 { margin-bottom: 40px;}
         width: 40%;
         margin: 0 auto 40px;
     }
-    #about .imgArea {
-        margin-bottom: 3rem;
-    }
     #about .txtArea p {
         width: 90%;
         margin: 0 auto;
@@ -319,6 +324,8 @@ h3 { margin-bottom: 40px;}
 
 /* works */
 #works {
+    background: url('/assets/img/bg_skill.jpg') no-repeat left top;
+    background-size: cover;
     color: #fff;
 }
 #works:before {
@@ -330,7 +337,6 @@ h3 { margin-bottom: 40px;}
     background: rgba(0,0,0,0.6);
 }
 #works .inner {
-    width: 100%;
     text-align: center;
     position: relative;
     z-index: 10;
@@ -342,9 +348,14 @@ h3 { margin-bottom: 40px;}
 #works h3 {
     width: 100%;
     text-align: center;
-    color: #888;
     display: inline-block;
 }
+.lity-inner h4 {
+    font-weight: bold;
+    border-bottom: 1px solid  #000;
+    display: inline-block;
+}
+
 #works .fadeImg {
     margin: 0 auto;
     position: absolute;
@@ -355,16 +366,12 @@ h3 { margin-bottom: 40px;}
 }
 
 @media screen and (min-width: 769px){
-    #works {
-        background: url('/assets/img/bg_skill.jpg') no-repeat left top;
-        background-size: cover;
+    #works .inner {
+        width: 100%;
     }
     #works h2 {
         width: 100%;
         margin: 30px auto 80px;
-    }
-    #works h3 {
-        
     }
     .worksList {
         margin-bottom: 100px;
@@ -378,9 +385,6 @@ h3 { margin-bottom: 40px;}
     }
     .lity-inner h4 {
         margin-bottom: 5px;
-        font-weight: bold;
-        border-bottom: 1px solid  #000;
-        display: inline-block;
     }
     #works .fadeImg {
         width: 480px;
@@ -388,8 +392,6 @@ h3 { margin-bottom: 40px;}
 }
 @media screen and (max-width: 768px){
     #works {
-        background: url('/assets/img/bg_skill01_sp.png') repeat-y center top;
-        background-size: 70rem;
         position: relative;
     }
     #works .inner {
@@ -409,13 +411,20 @@ h3 { margin-bottom: 40px;}
         margin-bottom: 2rem;
     }
     .worksList {
-        margin-bottom: 100px;
-    }
-    .worksList li {
-        margin-bottom: 100px;
+        margin-bottom: 10rem;
     }
     #works .fadeImg {
         width: 100%;
+    }
+    .lity-inner .imgArea {
+        margin-bottom: 2rem;
+    }
+    .lity-inner .discription,
+    .lity-inner .tech {
+        margin-bottom: 2rem;
+    }
+    .lity-inner h4 {
+        margin-bottom: 1rem;
     }
 
 }
@@ -423,41 +432,39 @@ h3 { margin-bottom: 40px;}
 
     
 /* skill */
-#skill {
-    
-}
-#skill .inner {
-    margin-bottom: 200px;
-}
 #skill h2 {
     margin: 0 auto 100px;
 }
 .lity-inner {
-    width: 90%;
-    margin: 50px auto;
-    padding: 50px;
     background: #fff;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5%;
     overflow: scroll;
 }
-.lity-inner .imgArea {
-}
-.lity-inner .txtArea {
-}
-.worksList {
-    margin-bottom: 100px;
-    page-break-after: 20px;
-}
+
 
 #skill .graph {
     width: 100%;
 	min-height: 300px;
 	margin: 20px auto;
 }
+#skill .details {
+    width: 90%;
+    margin: 0 auto;
+}
 
 @media screen and (min-width: 769px){
+    .worksList {
+        margin-bottom: 100px;
+        page-break-after: 20px;
+    }
+   
+    .lity-inner {
+        width: 90%;
+        margin: 50px auto;
+        padding: 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5%;
+    }
     #skill h2 {
         width: 369px;
     }
@@ -466,6 +473,11 @@ h3 { margin-bottom: 40px;}
     }
 }
 @media screen and (max-width: 768px){
+    .lity-inner {
+        width: 90%;
+        margin: 1rem auto;
+        padding: 1%;
+    }
     #skill h2 {
         width: 30%;
         margin-bottom: 4rem;
@@ -481,9 +493,11 @@ h3 { margin-bottom: 40px;}
 
 footer {
     padding: 20px 0;
-    background: #000;
+    background: #6BD2EE;
     text-align: center;
     color: #fff;
+    position: relative;
+    z-index: 1000;
 }
 
 /* Page Top ページトップ
@@ -520,8 +534,8 @@ footer {
 
 @media screen and (max-width: 767px) {
   .pageTop {
-    width: 25%;
-    padding: 5.2% 0; }
+    width: 20%;
+    padding: 2% 0; }
     .pageTop a {
       width: 100%;
       height: inherit;
@@ -631,7 +645,7 @@ footer {
 ----------------------------------------*/
 [data-animation="fade"] {
     opacity: 0;
-    -webkit-transform: translate(0, 0); -ms-transform: translate(0, 0)  transform: translate(0, 0);
+    -webkit-transform: translate(0, 0); -ms-transform: translate(0, 0);  transform: translate(0, 0);
     -webkit-transition: all 0.4s; -o-transition: all 0.4s; transition: all 0.4s;
     display: block;
 }
@@ -672,13 +686,13 @@ footer {
     [data-animation="fade"] {
         -webkit-transition: all 0.3s; -o-transition: all 0.3s; transition: all 0.3s;
     }
-  [data-animation="fade"][data-delay="0.1"] { -webkit-transition-delay: 0; -o-transition-delay: 0: transition-delay: 0;}
+  [data-animation="fade"][data-delay="0.1"] { -webkit-transition-delay: 0; -o-transition-delay: 0; transition-delay: 0;}
   [data-animation="fade"][data-delay="0.2"] { -webkit-transition-delay: 0; -o-transition-delay: 0; transition-delay: 0;}
   [data-animation="fade"][data-delay="0.3"] { -webkit-transition-delay: 0; -o-transition-delay: 0; transition-delay: 0;}
   [data-animation="fade"][data-delay="0.4"] { -webkit-transition-delay: 0; -o-transition-delay: 0; transition-delay: 0;}
   [data-animation="fade"][data-delay="0.5"] { -webkit-transition-delay: 0; -o-transition-delay: 0; transition-delay: 0;}
   [data-animation="fade"][data-delay="0.6"] { -webkit-transition-delay: 0; -o-transition-delay: 0; transition-delay: 0;}
-  [data-animation="fade"][data-delay="0.7"] { -webkit-transition-delay: 0 -o-transition-delay: 0; transition-delay: 0;}
+  [data-animation="fade"][data-delay="0.7"] { -webkit-transition-delay: 0; -o-transition-delay: 0; transition-delay: 0;}
   [data-animation="fade"][data-delay="0.8"] { -webkit-transition-delay: 0; -o-transition-delay: 0; transition-delay: 0;}
   [data-animation="fade"][data-delay="0.9"] { -webkit-transition-delay: 0; -o-transition-delay: 0; transition-delay: 0;}
   [data-animation="fade"][data-delay="1"] { -webkit-transition-delay: 0; -o-transition-delay: 0; transition-delay: 0;}
@@ -717,3 +731,4 @@ body [data-animation="fade"].is-fadeIn {
     opacity : 1;
     transform : translate(0, 0);
 }
+

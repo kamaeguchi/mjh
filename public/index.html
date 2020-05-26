@@ -88,13 +88,13 @@
                         <li data-animation="fade" data-delay="0.1"><a href="#top">Top</a></li>
                         <li data-animation="fade" data-delay="0.2"><a href="#about">About</a></li>
                         <li data-animation="fade" data-delay="0.3"><a href="#works">Works</a></li>
-                        <li data-animation="fade" data-delay="0.4"><a href="#skill">Skill Set</a></li>
+                        <li data-animation="fade" data-delay="0.4"><a href="#skill">Skill</a></li>
                     </ul>
                     <ul class="gNaviList" data-device="sp">
                         <li><a href="#top">Top</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#works">Works</a></li>
-                        <li><a href="#skill">Skill Set</a></li>
+                        <li><a href="#skill">Skill</a></li>
                     </ul>
                 </div>
             </nav>
@@ -120,15 +120,16 @@
         <section id="about" class="section">
             <div class="frame768 flexbox __column2 __flex-pc">
                 <h2 data-animation="fade">About</h2>
-                <div class="imgArea inner" data-device="pc">
+                <div class="imgArea inner">
                     <p data-animation="fade" data-direction="up"><img src="/assets/img/img_kk.png" alt="" loading="lazy"></p>
                 </div>
                 <div class="txtArea inner taC">
                     <h3 data-animation="fade" data-delay="0.1">Katsuya Kamaeguchi</h3>
-                    <p class="mB10" data-animation="fade" data-delay="0.2">Katsuya Kamaeguchiのポートフォリオサイトです。</p>
-                    <p data-animation="fade" data-delay="0.3">これまで担当した案件・製作物・スキルについて、<br>
-                    簡単に紹介させていただきます。<br>
-                    業務で製作したものについてはイメージと説明のみになります。</p>
+                    <p data-animation="fade" data-delay="0.2">
+                    大学の経営学部を卒業後、1年ほど物流管理業務に従事しましたが、
+                    興味があったIT業界へ転職しました。
+                    その後はサイト製作やシステム開発に携わってきました。
+                    </p>
                 </div>
                 <span class="fadeImg" data-animation="fade" data-direction="up" data-delay="0.4" data-device="pc"><img src="/assets/img/bg_camera_02.png" alt=""></span>
                 <span class="about_bg_gray" data-animation="fade" data-direction="left" data-delay="0.3" data-device="pc"></span>
@@ -138,47 +139,103 @@
         <section id="works" class="section">
             <div class="frame1280 inner __flex-pc" data-animation="fade" data-direction="up">
                 <h2 data-animation="fade">Works</h2>
-
-                <p data-animation="fade" data-delay="0.1" class="mB40"></p>
-                <div id="graphic" class="frame768">
-                    <h3 data-animation="fade">Web</h3>
+                <p data-animation="fade" data-delay="0.1" class="frame768 mB40">
+                これまで担当した案件・製作物を簡単に紹介します。<br>
+                ※業務で製作したものについてはイメージと説明のみになります。</p>
+                <div id="Web" class="frame768">
+                    <h3 data-animation="fade">Business production</h3>
                     <ul class="worksList grid __column3-pc __column2-sp __gap5">
                         <li data-animation="fade" data-direction="up" data-delay="0.1">
-                            <a href="#sample01" data-lity="data-lity" class="no-smooth"><img src="/assets/img/thum_ec.jpg" alt=""></a>
+                            <a href="#sample01" data-lity="data-lity" class="no-smooth"><img src="/assets/img/thum_cti.gif" alt=""></a>
                             <div id="sample01" class="lity-inner lity-hide">
-                                <div class="imgArea"><img src="/assets/img/thum_ec.jpg"  alt=""></div>
+                                <div class="imgArea"><img src="/assets/img/thum_cti.gif"  alt=""></div>
                                 <div class="txtArea">
                                     <div class="discription">
                                         <h4>CTI/CMS</h4>
                                         <p>コールセンター向けCTI/CRMシステムを構築しました。<br>
-                                        顧客リストに対してオペレーターが荷電、応答内容をDBに保存・管理します。<br>
-                                        オフィスの座席レイアウトをドラッグ&ドロップで設定でき、座席に対するログインやステータス（コール中・通話中・待機中）等がリアルタイムでモニタリングできます。<br>
-                                        
+                                        バックエンド、サーバーサイドそれぞれ1名の少人数チームで開発が開始され、
+                                        初期段階でフロントエンド担当として加わり、要件定義・仕様書・設計書・実装等に携わりました。<br>
+                                        調査の結果、ユーザビリティに優れた競合システムがあまり無かっため、
+                                        下記のように、ユーザー目線で直感的に使用できるUI設計に注力しました。<br><br>
+                                        ・荷電画面で記録する項目をドラッグで自由にレイアウト可能<br>
+                                        ・荷電画面の入力フォームは値の更新時に非同期で自動保存<br>
+                                        ・実際のオフィスに合わせて座席レイアウトをドラッグで設定可能<br>
+                                        ・設定した仮想オフィス画面でステータス等がリアルタイムで確認可能<br>
                                     </p>
                                     </div>
                                     <div class="tech">                                    
                                         <h4>使用言語・CMS・環境など</h4>
-                                        <p>FuelPHP, html, javascript, AWS, GCP, Docker</p>
+                                        <p>FuelPHP, html/css(sass), javascript, AWS, Git, GCP, Docker</p>
                                     </div>
                                 </div>
                             </div>
                         </li>
                         <li data-animation="fade" data-direction="up" data-delay="0.1">
-                            <a href="#sample01" data-lity="data-lity" class="no-smooth"><img src="/assets/img/thum_ec.jpg" alt=""></a>
-                            <div id="sample01" class="lity-inner lity-hide">
+                            <a href="#cyokuhan" data-lity="data-lity" class="no-smooth"><img src="/assets/img/thum_ec.jpg" alt=""></a>
+                            <div id="cyokuhan" class="lity-inner lity-hide">
                                 <div class="imgArea"><img src="/assets/img/thum_ec.jpg"  alt=""></div>
                                 <div class="txtArea">
                                     <div class="discription">
                                         <h4>ECサイト</h4>
-                                        <p>メーカー直販(D2C)の大型ECサイトを構築しました。</p>
+                                        <p>メーカー直販(D2C)のECサイトを構築しました。
+                                        CMSには当時EC系国内シェアトップのEC-CUBEではなく、世界的にシェアが伸びていたMagento2を選択し、
+                                        ニアショア・オフショア含め、フロント開発約50名・システム開発10名の体制で約1年弱かけて製作。
+                                        フロントサイドのPLとして、要件定義・スケジュール管理・アサイン調整・進捗管理などを行いました。
+                                        ニア/オフショアの品質管理のため、コンポーネントと製作ルールの共有を徹底したため、
+                                        トラブル無く無事リリースすることができました。
+                                        </p>
                                     </div>
                                     <div class="tech">                                    
                                         <h4>使用言語・CMS・環境など</h4>
-                                        <p>Magento2, html, javascript, XAMPP</p>
+                                        <p>Magento2, html/css(sass), javascript, Git, XAMPP</p>
                                     </div>
                                 </div>
                             </div>
                         </li>
+                        <li data-animation="fade" data-direction="up" data-delay="0.1">
+                            <a href="#airlines" data-lity="data-lity" class="no-smooth"><img src="/assets/img/thum_airline.jpg" alt=""></a>
+                            <div id="airlines" class="lity-inner lity-hide">
+                                <div class="imgArea"><img src="/assets/img/thum_airline.jpg"  alt=""></div>
+                                <div class="txtArea">
+                                    <div class="discription">
+                                        <h4>国内航空会社予約サイト</h4>
+                                        <p>国内航空会社の予約サイトを構築しました。<br>
+                                        社内の別チームが製作していましたが、問題があったため再製作の指揮をとりました。<br>
+                                        汎用的な機能やコンポーネントをまとめ直し、無事リリースが完了しました。
+                                        </p>
+                                    </div>
+                                    <div class="tech">                                    
+                                        <h4>使用言語・CMS・環境など</h4>
+                                        <p>html/css, javascript, Git, XAMPP</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-animation="fade" data-direction="up" data-delay="0.1">
+                            <a href="#jeo" data-lity="data-lity" class="no-smooth"><img src="/assets/img/thum_google.gif" alt=""></a>
+                            <div id="jeo" class="lity-inner lity-hide">
+                                <div class="imgArea"><img src="/assets/img/thum_google.gif"  alt=""></div>
+                                <div class="txtArea">
+                                    <div class="discription">
+                                        <h4>Googleしごと検索スクレイピングツール</h4>
+                                        <p>Googleしごと検索で検索した結果をCSV出力するツールを製作しました。
+                                        検索結果は検索を実行したデバイスの位置情報を使用するため、
+                                        位置情報を上書きして任意の地点でのキーワードの検索結果を表示します。
+                                        </p>
+                                    </div>
+                                    <div class="tech">                                    
+                                        <h4>使用言語・CMS・環境など</h4>
+                                        <p>AWS Lambda, Node.js, chromium, puppeteer, GCP MAP API, GCP Geocoding API</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="frame768">
+                    <h3 data-animation="fade">Private production</h3>
+                    <ul class="worksList grid __column3-pc __column2-sp __gap5">
                         <li data-animation="fade" data-direction="up" data-delay="0.2">
                             <a href="#sample02" data-lity="data-lity" class="no-smooth"><img src="/assets/img/thum_anulum.jpg" alt=""></a>
                             <div id="sample02" class="lity-inner lity-hide">
@@ -186,11 +243,12 @@
                                 <div class="txtArea">
                                     <div class="discription">
                                         <h4>コーポレート/ブランドサイト</h4>
-                                        <p>コーポレートサイトを構築しました。アニメーション等動きのあるサイト希望されていたため、スクロールアニメーションを多様しています。</p>
+                                        <p>コーポレートサイトを構築しました。動きのあるサイト希望されていたため、ページ全体にスクロールアニメーションを使用しています。
+                                        トップからのスクロール量に応じてクラスの制御を行い、アニメーションはすべてCSSで行うことで動作を軽くしています。</p>
                                     </div>
                                     <div class="tech">                                    
                                         <h4>使用言語・CMS・環境など</h4>
-                                        <p>html, javascript</p>
+                                        <p>html/css, javascript, NodeJS</p>
                                     </div>
                                     <div class="externalLink">                                    
                                         <h4>リンク</h4>
@@ -200,17 +258,20 @@
                             </div>
                         </li>
                         <li data-animation="fade" data-direction="up" data-delay="0.3">
-                            <a href="#sample03" data-lity="data-lity" class="no-smooth"><img src="/assets/img/thum_mono.png" alt=""></a>
+                            <a href="#sample03" data-lity="data-lity" class="no-smooth"><img src="/assets/img/thum_mono.jpg" alt=""></a>
                             <div id="sample03" class="lity-inner lity-hide">
-                                <div class="imgArea"><img src="/assets/img/thum_mono.png"  alt=""></div>
+                                <div class="imgArea"><img src="/assets/img/thum_mono.jpg"  alt=""></div>
                                 <div class="txtArea">
                                     <div class="discription">
                                         <h4>アパレルECサイト</h4>
-                                        <p>新規アパレルECサイトを構築しました。</p>
+                                        <p>新規アパレルECサイトを構築しました。
+                                        EC-CUBEとMagentは業務で構築経験があったことと規模が小さいことから、
+                                        CMSはWordpressとWoocommerce、カートはSquareを採用しています。
+                                        </p>
                                     </div>
                                     <div class="tech">                                    
                                         <h4>使用言語・CMS・環境など</h4>
-                                        <p>Wordpress/Woocommerce, php, javascript</p>
+                                        <p>Wordpress/Woocommerce, php, javascript, XAMPP</p>
                                     </div>
                                     <div class="externalLink">                                    
                                         <h4>リンク</h4>
@@ -221,7 +282,36 @@
                         </li>
                     </ul>
                 </div>
-                <div id="graphic" class="frame768">
+                <div class="frame768">
+                    <h3 data-animation="fade">Learning</h3>
+                    <ul class="worksList grid __column3-pc __column2-sp __gap5">
+                        <li data-animation="fade" data-direction="up" data-delay="0.1">
+                            <a href="#todo" data-lity="data-lity" class="no-smooth"><img src="/assets/img/thum_todo.gif" alt=""></a>
+                            <div id="todo" class="lity-inner lity-hide">
+                                <div class="imgArea"><img src="/assets/img/thum_todo.gif"  alt=""></div>
+                                <div class="txtArea">
+                                    <div class="discription">
+                                        <h4>TODOリスト</h4>
+                                        <p>Reactの学習のためTODOリストを作成。<br>
+                                        基本部分はチュートリアルを参考に、各Todoにメモ機能を追加しました。
+                                        また、スタイルはMaterial-UIに変更しました。<br>
+                                        今後はtodoの未/済フラグ、ソート、カテゴリ機能などを追加予定です。
+                                    </p>
+                                    </div>
+                                    <div class="tech">                                    
+                                        <h4>使用言語・CMS・環境など</h4>
+                                        <p>React, Webpack, Babel, Material-UI, GitHub, firebase</p>
+                                    </div>
+                                    <div class="externalLink">                                    
+                                        <h4>リンク</h4>
+                                        <p><a href="https://majic2.web.app/works/todo/" target="_blank">https://majic2.web.app/works/todo/</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <div id="photo" class="frame768">
                     <h3 data-animation="fade">Photo</h3>
                     <ul class="worksList grid __column3-pc __column2-sp __gap5">
                         <li data-animation="fade" data-direction="up" data-delay="0.1"><a href="/assets/img/photo/DSC00082.JPG" data-lity="data-lity"><img src="/assets/img/photo/DSC00082.JPG" alt=""></a></li>
@@ -231,9 +321,16 @@
                         <li data-animation="fade" data-direction="up" data-delay="0.2"><a href="/assets/img/photo/DSC09742.jpg" data-lity="data-lity"><img src="/assets/img/photo/DSC09742.jpg" alt=""></a></li>
                         <li data-animation="fade" data-direction="up" data-delay="0.3"><a href="/assets/img/photo/DSC09862.JPG" data-lity="data-lity"><img src="/assets/img/photo/DSC09862.JPG" alt=""></a></li>
                     </ul>
-                </div>
+                </div>>-->
+                <!-- <div id="film" class="frame1280">
+                    <h3 data-animation="fade">ムービー</h3>
+                    <ul class="filmList">
+                        <li data-animation="fade" data-direction="up"><a href="https://youtu.be/bZhGFbjqnSA?modestbranding=0&rel=0" data-lity="data-lity"><img src="https://i9.ytimg.com/vi/bZhGFbjqnSA/mqdefault.jpg?time=1589437378880&sqp=CJDG8_UF&rs=AOn4CLA2aSgSUtVM2fs9ozQq0aMiHLQ0WA" loading="lazy" border="0" /></a></li>
+                        <li data-animation="fade" data-direction="up" data-delay="0.1"><a href="https://www.youtube.com/watch?v=h5sYJj028To?modestbranding=0&rel=0" data-lity="data-lity"><img src="https://i9.ytimg.com/vi/h5sYJj028To/mq1.jpg?sqp=CPvI8_UF&rs=AOn4CLB0JbAWMtLS6uGNbuxl2NCP13cQ8g" loading="lazy" border="0" /></a></li>
+                    </ul>                    
+                </div> -->
             </div>
-            <span class="fadeImg" data-animation="fade" data-direction="down" data-delay="0.9"><img src="/assets/img/img_light.png" alt="" loading="lazy"></span>
+            <span class="fadeImg" data-animation="fade" data-direction="up" data-delay="0.9"><img src="/assets/img/img_light.png" alt="" loading="lazy"></span>
         </section>
 
         <section id="skill" class="section">
@@ -241,36 +338,43 @@
                 <div>
                     <h2 data-animation="fade" data-direction="up">skill</h2>
                 </div>
+                <p data-animation="fade" data-delay="0.1" class="frame768 mB40">
+                これまでWebサイトのフロント製作を中心にWebの様々な技術に触れてきました。
+                今後はフロントに比べて暦が浅いバックエンドの知見を深めつつ、
+                フロントエンドフレームワークのスキルを伸ばしたいと考えています。
+                </p>
                 <ul class="skillList grid-pc __column3-pc frame1280">
-                    <li data-animation="fade" data-direction="up" data-delay="0.2"><h3>Front-end</h3><div id="graph1" class="graph"></div></li>
-                    <li data-animation="fade" data-direction="up" data-delay="0.4"><h3>Back-end</h3><div id="graph2" class="graph"></div></li>
-                    <li data-animation="fade" data-direction="up" data-delay="0.6"><h3>Server-side</h3><div id="graph3" class="graph"></div></li>
+                    <li data-animation="fade" data-direction="up" data-delay="0.2">
+                        <h3>Front-end</h3>
+                        <div id="graph1" class="graph"></div>
+                        <p class="details">Webサイトに関して製作やディレクションの経験を重ねました。
+                        今後はSPA等のフロント開発を得意とするエンジニアを目指し、
+                        現在ReactやVueなどモダンJSフレームワーク習得のため自己研鑽中です。
+                        </p>
+                    </li>
+                    <li data-animation="fade" data-direction="up" data-delay="0.4">
+                        <h3>Back-end</h3>
+                        <div id="graph2" class="graph"></div>
+                        <p class="details">3年程のシステム開発で広く経験を積みました。
+                        それぞれ調べながらであれば問題なく使用できますが、
+                        知見が浅いため引き続き自己研鑽します。
+                        </p>
+                    </li>
+                    <li data-animation="fade" data-direction="up" data-delay="0.6">
+                        <h3>DevOps</h3>
+                        <div id="graph3" class="graph"></div>
+                        <p class="details">Backlog、Redmin、Git、SVN等問題なく利用できます。
+                        以前はgulpを利用していましたが、現在npm/webpack/Babel/ESLint/TypeScriptでの開発に移行中です。
+                        </p>
+                    </li>
                 </ul>
-                
-<!--
-                <div id="film" class="frame1280">
-                    <h3 data-animation="fade">ムービー</h3>
-                    <ul class="filmList">
-                        <li data-animation="fade" data-direction="up"><a href="https://youtu.be/bZhGFbjqnSA?modestbranding=0&rel=0" data-lity="data-lity"><img src="https://i9.ytimg.com/vi/bZhGFbjqnSA/mqdefault.jpg?time=1589437378880&sqp=CJDG8_UF&rs=AOn4CLA2aSgSUtVM2fs9ozQq0aMiHLQ0WA" loading="lazy" border="0" /></a></li>
-                        <li data-animation="fade" data-direction="up" data-delay="0.1"><a href="https://www.youtube.com/watch?v=h5sYJj028To?modestbranding=0&rel=0" data-lity="data-lity"><img src="https://i9.ytimg.com/vi/h5sYJj028To/mq1.jpg?sqp=CPvI8_UF&rs=AOn4CLB0JbAWMtLS6uGNbuxl2NCP13cQ8g" loading="lazy" border="0" /></a></li>
-                    </ul>                    
-                </div>
--->
             </div>
         </section>
         <div class="pageTop">
             <a href="#top"></a>
         </div>
-    </main>
-    
-<style type="text/css">
-body {
-	margin: 0px;
-	padding: 0px;
-}
-</style>
-   
-    <footer>
+    </main>  
+    <footer class="footer">
         <p id="copyright">mjh.saloon 2020 Copyright&copy; All rights reserved.</p>
     </footer>
 
@@ -281,7 +385,7 @@ body {
         data: [
             [0, 4],
             [1, 4],
-            [2, 3],
+            [2, 4],
             [3, 4],
             [4, 1],
             [5, 4]
@@ -290,9 +394,9 @@ body {
         graph, ticks;
     ticks = [
         [0, "HTML"],
-        [1, "CSS"],
-        [2, "CSS設計"],
-        [3, "Javascript"],
+        [1, "CSS/Sass"],
+        [2, "Javascript"],
+        [3, "RWD"],
         [4, "JS FW"],
         [5, "CMS"]
     ];
@@ -321,8 +425,8 @@ body {
         label: "Back-end",
         data: [
             [0, 2],
-            [1, 2],
-            [2, 3],
+            [1, 3],
+            [2, 2],
             [3, 2],
             [4, 2],
             [5, 2]
@@ -331,11 +435,11 @@ body {
         graph, ticks;
     ticks = [
         [0, "PHP"],
-        [1, "PHP FW"],
-        [2, "Node.js"],
-        [3, "MySQL"],
-        [4, ""],
-        [5, ""]
+        [1, "Node.js"],
+        [2, "MySQL"],
+        [3, "DynamoDB"],
+        [4, "Apache"],
+        [5, "Nginx"]
     ];
     graph = Flotr.draw(container, [s1], {
         radar: {
@@ -359,24 +463,24 @@ body {
 
 (function basic_radar(container) {
     var s1 = {
-        label: "server",
+        label: "DevOps",
         data: [
-            [0, 4],
+            [0, 3],
             [1, 4],
-            [2, 3],
-            [3, 4],
-            [4, 1],
-            [5, 4]
+            [2, 2],
+            [3, 3],
+            [4, 2],
+            [5, 2]
         ]
     },
         graph, ticks;
     ticks = [
-        [0, ""],
-        [1, ""],
-        [2, ""],
-        [3, ""],
-        [4, ""],
-        [5, ""]
+        [0, "Git/SVN"],
+        [1, "Backlog"],
+        [2, "Docker"],
+        [3, "AWS"],
+        [4, "GCP"],
+        [5, "Chromeless"]
     ];
     graph = Flotr.draw(container, [s1], {
         radar: {
